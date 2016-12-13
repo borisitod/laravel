@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 class UsersController extends Controller
 {
@@ -47,9 +48,9 @@ class UsersController extends Controller
             'password'=>$request->password,
         ]);
 
-        Auth::login($user);
-        session()->flash('success', 'Thank you for registering with us.');
-        return redirect()->route('users.show', [$user]);
+        $this->sendEmailConfirmationTo($user);
+        session()->flash('success', 'Please check your email to activate your account.');
+        return redirect('/');
     }
 
     public function edit($id){
@@ -83,5 +84,30 @@ class UsersController extends Controller
         $user->delete();
         session()->flash('success', 'Delete user successfully');
         return back();
+    }
+
+    public function confirmEmail($token){
+        $user = User::where('activation_token', $token)->firstOrFail();
+
+        $user->activated = true;
+        $user->activation_token = null;
+        $user->save();
+
+        Auth::login($user);
+        session()->flash('success', 'Activate successfully.');
+        return redirect()->route('users.show', [$user]);
+    }
+
+    protected function sendEmailConfirmationTo($user){
+        $view = 'emails.confirm';
+        $data = compact('user');
+        $from = 'laravel@laravel-app.com';
+        $name = 'Admin';
+        $to = $user->email;
+        $subject = "Thanks for registering your account, please confirm your email.";
+
+        Mail::send($view, $data, function ($message) use ($from, $name, $to, $subject) {
+            $message->from($from, $name)->to($to)->subject($subject);
+        });
     }
 }

@@ -38,8 +38,16 @@ class SessionsController extends Controller
         ];
 
         if(Auth::attempt($credentials, $request->has('remember'))){
-            session()->flash('success', 'Welcome back');
-            return redirect()->intended(route('users.show', [Auth::user()]));
+            if(Auth::user()->activated)
+            {
+                session()->flash('success', 'Welcome back');
+                return redirect()->intended(route('users.show', [Auth::user()]));
+            }else{
+                Auth::logout();
+                session()->flash('warning', 'Your account has not been activated yet, please check your email');
+                return redirect('/');
+            }
+
         }else{
             sessions()->flash('danger', 'Sorry, You email or password is wrong.');
             return redirect()->back();
