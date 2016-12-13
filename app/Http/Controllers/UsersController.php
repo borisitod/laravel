@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class UsersController extends Controller
 {
@@ -33,6 +34,7 @@ class UsersController extends Controller
             'password'=>$request->password,
         ]);
 
+        Auth::login($user);
         session()->flash('success', 'Thank you for registering with us.');
         return redirect()->route('users.show', [$user]);
     }
