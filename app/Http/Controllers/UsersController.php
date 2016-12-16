@@ -16,7 +16,7 @@ class UsersController extends Controller
     public function __construct()
     {
         $this->middleware('auth',[
-            'only'=>['index', 'edit', 'update','destroy']
+            'only'=>['index', 'edit', 'update','destroy', 'followings', 'followers']
         ]);
     }
 
@@ -112,4 +112,21 @@ class UsersController extends Controller
             $message->from($from, $name)->to($to)->subject($subject);
         });
     }
+
+    public function followings($id)
+    {
+        $user = User::findOrFail($id);
+        $users = $user->followings()->paginate(30);
+        $title = 'Follow';
+        return view('users.show_follow', compact('users', 'title'));
+    }
+
+    public function followers($id)
+    {
+        $user = User::findOrFail($id);
+        $users = $user->followers()->paginate(30);
+        $title = 'Followers';
+        return view('users.show_follow', compact('users', 'title'));
+    }
+
 }
