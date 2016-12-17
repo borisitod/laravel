@@ -29,3 +29,22 @@ function get_db_config()
         ];
     }
 }
+
+function get_mail_config()
+{
+    if (getenv('IS_IN_HEROKU')) {
+        return $mail_config = [
+            'username' => getenv('MAIL_USERNAME'),
+            'password' => getenv('MAIL_PASSWORD'),
+            'domain'=>getenv('MAIL_DOMAIN'),
+            'secret'=>getenv('MAIL_SECRET')
+        ];
+    } else {
+        return $mail_config = [
+            'username' => env('MAIL_USERNAME'),
+            'password' => env('MAIL_PASSWORD'),
+            'domain'=>env('MAILGUN_DOMAIN'),
+            'secret'=>env('MAILGUN_SECRET')
+        ];
+    }
+}

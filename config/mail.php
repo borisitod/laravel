@@ -1,6 +1,8 @@
 <?php
 
+$mail_config = get_mail_config();
 return [
+
 
     /*
     |--------------------------------------------------------------------------
@@ -15,7 +17,7 @@ return [
     |
     */
 
-    'driver' => env('MAIL_DRIVER', 'smtp'),
+    'driver' => env('MAIL_DRIVER', 'mailgun'),
 
     /*
     |--------------------------------------------------------------------------
@@ -28,7 +30,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'smtp.gmail.com'),
+    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
 
     /*
     |--------------------------------------------------------------------------
@@ -80,7 +82,7 @@ return [
     |
     */
 
-    'username' => env('MAIL_USERNAME'),
+    'username' => $mail_config['username'],
 
     /*
     |--------------------------------------------------------------------------
@@ -93,7 +95,7 @@ return [
     |
     */
 
-    'password' => env('MAIL_PASSWORD'),
+    'password' => $mail_config['password'],
 
     /*
     |--------------------------------------------------------------------------
@@ -120,5 +122,6 @@ return [
     */
 
     'pretend' => env('MAIL_PRETEND', false),
+
 
 ];

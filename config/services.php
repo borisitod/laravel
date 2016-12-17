@@ -1,5 +1,6 @@
 <?php
 
+$mail_config = get_mail_config();
 return [
 
     /*
@@ -15,8 +16,8 @@ return [
     */
 
     'mailgun' => [
-        'domain' => env('MAILGUN_DOMAIN'),
-        'secret' => env('MAILGUN_SECRET'),
+        'domain' => $mail_config['domain'],
+        'secret' => $mail_config['secret'],
     ],
 
     'mandrill' => [
