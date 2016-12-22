@@ -55,8 +55,8 @@
 
 @include('layouts._navigation')
 @include('shared.msg')
-
 @yield('content')
+
 
 <script src="{{asset('js/jquery.min.js')}}"></script>
 <script src="{{asset('js/chart.js')}}"></script>
