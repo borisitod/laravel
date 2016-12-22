@@ -23,7 +23,7 @@ class SessionsController extends Controller
     }
 
     public function create(){
-        return view('sessions.create');
+        return view('sessions.login');
     }
 
     public function store(Request $request){
@@ -41,7 +41,7 @@ class SessionsController extends Controller
             if(Auth::user()->activated)
             {
                 session()->flash('success', 'Welcome back');
-                return redirect()->intended(route('users.show', [Auth::user()]));
+                return redirect()->intended(route('home', [Auth::user()]));
             }else{
                 Auth::logout();
                 session()->flash('warning', 'Your account has not been activated yet, please check your email');

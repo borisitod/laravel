@@ -16,4 +16,21 @@ elixir(function(mix) {
         .browserify('app.js');
 });
 
+// elixir(function(mix) {
+//     mix.sass('app.scss')
+//
+//         .styles([
+//             'libs/toolkit.css',
+//             'libs/application.css'
+//          ], './public/css/libs.css')
+//
+//         .scripts([
+//             'libs/jquery.min.js',
+//             'libs/chart.js',
+//             'libs/toolkit.js',
+//             'libs/application.js'
+//         ], './public/js/libs.js')
+//
+// });
+
 

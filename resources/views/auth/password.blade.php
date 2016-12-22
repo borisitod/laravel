@@ -11,7 +11,6 @@
                         @include('shared.errors')
                         <form method="POST" action="{{ route('password.reset') }}">
                             {{ csrf_field() }}
-
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Email：</label>
                                 <div class="col-md-6">
