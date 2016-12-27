@@ -18,7 +18,7 @@
                         <a href="{{route('home')}}">Home</a>
                     </li>
                     <li>
-                        <a href="">Profile</a>
+                        <a href="{{route('users.edit', $user->id)}}">Profile</a>
                     </li>
                     <li>
                         <a data-toggle="modal" href="#msgModal">Messages</a>
@@ -33,7 +33,9 @@
                     </li>
                     <li>
                         <button class="btn btn-default navbar-btn navbar-btn-avitar" data-toggle="popover">
-                            <img class="img-circle" src="{{asset('img/avatar-dhg.png')}}">
+                            {{--<img class="img-circle" src="{{asset('img/avatar-dhg.png')}}">--}}
+
+                            <img class="img-circle"  src="{{$user->gravatar('140')}}" alt="{{$user->name}}">
                         </button>
                     </li>
                 </ul>

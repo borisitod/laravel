@@ -28,16 +28,13 @@
     <meta name="keywords" content="">
     <meta name="author" content="">
     {{--@include('layouts._header')--}}
-    <title>
-
-        Home
-
-    </title>
+    <title>@yield('title','Laravel') - Laravel App</title>
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
-    {{--<link href="{{asset('css/app.css')}}" ref="stylesheet">--}}
+
     <link href="{{asset('css/toolkit.css')}}" rel="stylesheet">
     <link href="{{asset('css/application.css')}}" rel="stylesheet">
+    <link href="{{asset('css/app.css')}}" ref="stylesheet">
 
     {{--<link href="resource/assets/libs/" ref="stylesheet">--}}
 
@@ -55,6 +52,7 @@
 
 @include('layouts._navigation')
 @include('shared.msg')
+@include('shared.messages')
 @yield('content')
 
 

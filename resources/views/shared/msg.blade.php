@@ -13,7 +13,7 @@
                         <a href="#" class="list-group-item">
                             <div class="media">
                 <span class="media-left">
-                <img class="img-circle media-object" src="img/avatar-fat.jpg">
+                <img class="img-circle media-object" src="{{asset('img/avatar-fat.jpg')}}">
                 </span>
                                 <div class="media-body">
                                     <strong>Jacob Thornton</strong> and <strong>1 other</strong>
@@ -26,7 +26,7 @@
                         <a href="#" class="list-group-item">
                             <div class="media">
                 <span class="media-left">
-                  <img class="img-circle media-object" src="img/avatar-mdo.png">
+                  <img class="img-circle media-object" src="{{asset('img/avatar-mdo.png')}}">
                 </span>
                                 <div class="media-body">
                                     <strong>Mark Otto</strong> and <strong>3 others</strong>

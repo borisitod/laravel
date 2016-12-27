@@ -68,14 +68,15 @@
                 <div class="panel panel-default panel-profile m-b-md">
                     <div class="panel-heading" style="background-image: url(img/iceland.jpg);"></div>
                     <div class="panel-body text-center">
-                        <a href="profile/index.html">
-                            <img
-                                    class="panel-profile-img"
-                                    src="img/avatar-dhg.png">
+                        <a href="{{route('users.show', $user->id)}}">
+                            {{--<img--}}
+                                    {{--class="panel-profile-img"--}}
+                                    {{--src="img/avatar-dhg.png">--}}
+                            <img src="{{$user->gravatar('140')}}" alt="{{$user->name}}" class="panel-profile-img">
                         </a>
 
                         <h5 class="panel-title">
-                            <a class="text-inherit" href="profile/index.html">Dave Gamache</a>
+                            <a class="text-inherit" href="{{route('users.show', $user->id)}}">{{$user->name}}</a>
                         </h5>
 
                         <p class="m-b-md">I wish i was a little bit taller, wish i was a baller, wish i had a girl… also.</p>
@@ -84,14 +85,14 @@
                             <li class="panel-menu-item">
                                 <a href="#userModal" class="text-inherit" data-toggle="modal">
                                     Friends
-                                    <h5 class="m-y-0">12M</h5>
+                                    <h5 class="m-y-0">{{ count($user->followers) }}</h5>
                                 </a>
                             </li>
 
                             <li class="panel-menu-item">
                                 <a href="#userModal" class="text-inherit" data-toggle="modal">
-                                    Enemies
-                                    <h5 class="m-y-0">1</h5>
+                                    Tweets
+                                    <h5 class="m-y-0"> {{ $user->statuses()->count() }}</h5>
                                 </a>
                             </li>
                         </ul>
@@ -147,131 +148,40 @@
                 <ul class="list-group media-list media-list-stream">
 
                     <li class="media list-group-item p-a">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Message">
-                            <div class="input-group-btn">
-                                <button type="button" class="btn btn-default">
-                                    <span class="icon icon-camera"></span>
-                                </button>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="media list-group-item p-a">
-                        <a class="media-left" href="#">
-                            <img
-                                    class="media-object img-circle"
-                                    src="img/avatar-dhg.png">
-                        </a>
-                        <div class="media-body">
-                            <div class="media-heading">
-                                <small class="pull-right text-muted">4 min</small>
-                                <h5>Dave Gamache</h5>
-                            </div>
-
-                            <p>
-                                Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                            </p>
-
-                            <div class="media-body-inline-grid" data-grid="images">
-                                <div style="display: none">
-                                    <img data-action="zoom" data-width="1050" data-height="700" src="img/unsplash_1.jpg">
-                                </div>
-
-                                <div style="display: none">
-                                    <img data-action="zoom" data-width="640" data-height="640" src="img/instagram_1.jpg">
-                                </div>
-
-                                <div style="display: none">
-                                    <img data-action="zoom" data-width="640" data-height="640" src="img/instagram_13.jpg">
-                                </div>
-
-                                <div style="display: none">
-                                    <img data-action="zoom" data-width="1048" data-height="700" src="img/unsplash_2.jpg">
-                                </div>
-                            </div>
-
-                            <ul class="media-list m-b">
-                                <li class="media">
-                                    <a class="media-left" href="#">
-                                        <img
-                                                class="media-object img-circle"
-                                                src="img/avatar-fat.jpg">
-                                    </a>
-                                    <div class="media-body">
-                                        <strong>Jacon Thornton: </strong>
-                                        Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis.
+                        <form action="{{ route('statuses.store') }}" method="POST">
+                            <div class="input-group">
+                                    @include('shared.errors')
+                                    {{ csrf_field() }}
+                                    <input type="text" name="content" class="form-control" placeholder="Talking about your new story">
+                                    <div class="input-group-btn">
+                                        <button type="submit" class="btn btn-default">
+                                            <span class="icon icon-camera"></span>
+                                        </button>
                                     </div>
-                                </li>
-                                <li class="media">
-                                    <a class="media-left" href="#">
-                                        <img
-                                                class="media-object img-circle"
-                                                src="img/avatar-mdo.png">
-                                    </a>
-                                    <div class="media-body">
-                                        <strong>Mark Otto: </strong>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+                            </div>
+                        </form>
                     </li>
+                    @if (count($feed_items))
+                        @foreach($feed_items as $status)
+                            <li class="media list-group-item p-a">
+                                <a class="media-left" href="#">
+                                    <img
+                                            class="media-object img-circle"
+                                            src="{{ $status->user->gravatar('140')}}">
+                                </a>
+                                <div class="media-body">
+                                    <div class="media-heading">
+                                        <small class="pull-right text-muted">{{ $status->created_at->diffForHumans()}}</small>
+                                        <h5>{{$status->user->name}}</h5>
+                                    </div>
 
-                    <li class="media list-group-item p-a">
-                        <a class="media-left" href="#">
-                            <img
-                                    class="media-object img-circle"
-                                    src="img/avatar-fat.jpg">
-                        </a>
-                        <div class="media-body">
-                            <div class="media-body-text">
-                                <div class="media-heading">
-                                    <small class="pull-right text-muted">12 min</small>
-                                    <h5>Jacob Thornton</h5>
+                                    <p>
+                                        {{ $status->content }}
+                                    </p>
                                 </div>
-                                <p>
-                                    Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="media list-group-item p-a">
-                        <a class="media-left" href="#">
-                            <img
-                                    class="media-object img-circle"
-                                    src="img/avatar-mdo.png">
-                        </a>
-                        <div class="media-body">
-                            <div class="media-heading">
-                                <small class="pull-right text-muted">34 min</small>
-                                <h5>Mark Otto</h5>
-                            </div>
-
-                            <p>
-                                Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-                            </p>
-
-                            <div class="media-body-inline-grid" data-grid="images">
-                                <img style="display: none" data-width="640" data-height="640" data-action="zoom" src="img/instagram_3.jpg">
-                            </div>
-
-                            <ul class="media-list">
-                                <li class="media">
-                                    <a class="media-left" href="#">
-                                        <img
-                                                class="media-object img-circle"
-                                                src="img/avatar-dhg.png">
-                                    </a>
-                                    <div class="media-body">
-                                        <strong>Dave Gamache: </strong>
-                                        Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis.
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
+                            </li>
+                        @endforeach
+                    @endif
                 </ul>
             </div>
             <div class="col-md-3">
@@ -293,8 +203,10 @@
 
                 <div class="panel panel-default m-b-md hidden-xs">
                     <div class="panel-body">
-                        <h5 class="m-t-0">Likes <small>· <a href="#">View All</a></small></h5>
+                        <h5 class="m-t-0">Followings <small>· <a href="{{route('users.followings', $user->id)}}">View All</a></small></h5>
                         <ul class="media-list media-list-stream">
+                            @if(count($home_users)> 0)
+                                @foreach($home_users as $home_user)
                             <li class="media m-b">
                                 <a class="media-left" href="#">
                                     <img
@@ -302,27 +214,51 @@
                                             src="img/avatar-fat.jpg">
                                 </a>
                                 <div class="media-body">
-                                    <strong>Jacob Thornton</strong> @fat
-                                    <div class="media-body-actions">
-                                        <button class="btn btn-primary-outline btn-sm">
-                                            <span class="icon icon-add-user"></span> Follow</button>
-                                    </div>
+                                    <strong>{{$home_user->name}}</strong>
+                                    {{--<div class="media-body-actions">--}}
+                                        {{--<button class="btn btn-primary-outline btn-sm">--}}
+                                            {{--<span class="icon icon-add-user"></span> Follow</button>--}}
+                                    {{--</div>--}}
+                                    @if ($home_user->id !== Auth::user()->id)
+                                        <div id="follow_form">
+                                            @if (Auth::user()->isFollowing($home_user->id))
+                                                <form action="{{ route('followers.destroy', $home_user->id) }}" method="post">
+                                                    {{ csrf_field() }}
+                                                    {{ method_field('DELETE') }}
+                                                    <div class="media-body-actions">
+                                                        <button  type="submit" class="btn btn-primary-outline btn-sm">
+                                                            <span class="icon icon-remove-user"></span> Cancel Follow</button>
+                                                    </div>
+                                                </form>
+                                            @else
+                                                <form action="{{ route('followers.store', $home_user->id) }}" method="post">
+                                                    {{ csrf_field() }}
+                                                    <div class="media-body-actions">
+                                                        <button  type="submit" class="btn btn-primary-outline btn-sm">
+                                                            <span class="icon icon-add-user"></span> Follow</button>
+                                                    </div>
+                                                </form>
+                                            @endif
+                                        </div>
+                                    @endif
                                 </div>
                             </li>
-                            <li class="media">
-                                <a class="media-left" href="#">
-                                    <img
-                                            class="media-object img-circle"
-                                            src="img/avatar-mdo.png">
-                                </a>
-                                <div class="media-body">
-                                    <strong>Mark Otto</strong> @mdo
-                                    <div class="media-body-actions">
-                                        <button class="btn btn-primary-outline btn-sm">
-                                            <span class="icon icon-add-user"></span> Follow</button></button>
-                                    </div>
-                                </div>
-                            </li>
+                                @endforeach
+                            @endif
+                            {{--<li class="media">--}}
+                                {{--<a class="media-left" href="#">--}}
+                                    {{--<img--}}
+                                            {{--class="media-object img-circle"--}}
+                                            {{--src="img/avatar-mdo.png">--}}
+                                {{--</a>--}}
+                                {{--<div class="media-body">--}}
+                                    {{--<strong>Mark Otto</strong> @mdo--}}
+                                    {{--<div class="media-body-actions">--}}
+                                        {{--<button class="btn btn-primary-outline btn-sm">--}}
+                                            {{--<span class="icon icon-add-user"></span> Follow</button></button>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</li>--}}
                         </ul>
                     </div>
                     <div class="panel-footer">

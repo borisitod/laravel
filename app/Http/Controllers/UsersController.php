@@ -77,7 +77,7 @@ class UsersController extends Controller
 
         session()->flash('success', 'Update successfully');
 
-        return redirect()->route('users.show', $id);
+        return redirect()->route('home');
     }
 
     public function destroy($id){

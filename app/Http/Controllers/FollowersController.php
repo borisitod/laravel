@@ -31,7 +31,8 @@ class FollowersController extends Controller
             Auth::user()->follow($id);
         }
 
-        return redirect()->route('users.show', $id);
+        //return redirect()->route('users.show', $id);
+        return redirect()->back();
     }
 
     public function destroy($id)
@@ -46,6 +47,7 @@ class FollowersController extends Controller
             Auth::user()->unfollow($id);
         }
 
-        return redirect()->route('users.show', $id);
+        //return redirect()->route('users.show', $id);
+        return redirect()->back();
     }
 }

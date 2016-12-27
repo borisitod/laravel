@@ -35,9 +35,9 @@
             <footer class="screen-login">
                 <a href="{{ route('password.reset') }}" class="text-muted">Forgot password</a>
             </footer>
-            <hr>
+            {{--<hr>--}}
 
-            <p>No account？<a href="{{ route('signup') }}">Signup Now！</a></p>
+            {{--<p>No account？<a href="{{ route('signup') }}">Signup Now！</a></p>--}}
         </form>
     </div>
 </div>
