@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fcebf048-50df-4032-9b30-8364e483334f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/SessionsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/SessionsController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/StaticPagesController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/StaticPagesController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/auth/password.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/password.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/_navigation.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/_navigation.blade.php" />
@@ -79,11 +80,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="messages.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="messages.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/shared/messages.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="133">
               <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SessionsController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SessionsController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="551">
+              <caret line="64" column="1" selection-start-line="64" selection-start-column="1" selection-end-line="64" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="123">
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -146,7 +167,6 @@
         <option value="$PROJECT_DIR$/bootstrap/helpers.php" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/resources/views/static_pages/login.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/SessionsController.php" />
         <option value="$PROJECT_DIR$/resources/views/sessions/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/_header.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/PasswordController.php" />
@@ -165,6 +185,7 @@
         <option value="$PROJECT_DIR$/resources/views/users/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/default.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/shared/messages.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/SessionsController.php" />
       </list>
     </option>
   </component>
@@ -546,7 +567,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="$USER_HOME$/.nvm/versions/node/v6.7.0/bin/node" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://G:/xampp/htdocs/laravel/app/Http/Controllers/UsersController.php&#10;rou&#9;FILE&#9;file://G:/xampp/htdocs/laravel/app/Http/routes.php&#10;route&#9;FILE&#9;file://G:/xampp/htdocs/laravel/app/Http/routes.php&#10;ro&#9;FILE&#9;file://G:/xampp/htdocs/laravel-blog/laravel/app/Http/routes.php&#10;user&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/app/Models/User.php&#10;follow&#9;null&#9;null&#10;follows&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/database/seeds/FollowersTableSeeder.php&#10;rout&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/app/Http/routes.php&#10;app&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/resources/assets/sass/app.scss&#10;usersco&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/app/Http/Controllers/UsersController.php&#10;sta&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/app/Http/Controllers/StatusesController.php&#10;status&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/resources/views/statuses/_status.blade.php&#10;app.&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/resources/assets/sass/app.scss&#10;userc&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/app/Http/Controllers/UsersController.php&#10;app.s&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/resources/assets/sass/app.scss&#10;in&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/resources/views/users/index.blade.php&#10;app.\&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/resources/assets/sass/app.scss" />
+    <property name="SearchEverywhereHistoryKey" value="r&#9;FILE&#9;file://G:/xampp/htdocs/laravel/app/Http/routes.php&#10;rou&#9;FILE&#9;file://G:/xampp/htdocs/laravel/app/Http/routes.php&#10;route&#9;FILE&#9;file://G:/xampp/htdocs/laravel/app/Http/routes.php&#10;ro&#9;FILE&#9;file://G:/xampp/htdocs/laravel-blog/laravel/app/Http/routes.php&#10;user&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/app/Models/User.php&#10;follow&#9;null&#9;null&#10;follows&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/database/seeds/FollowersTableSeeder.php&#10;rout&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/app/Http/routes.php&#10;app&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/resources/assets/sass/app.scss&#10;usersco&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/app/Http/Controllers/UsersController.php&#10;sta&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/app/Http/Controllers/StatusesController.php&#10;status&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/resources/views/statuses/_status.blade.php&#10;app.&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/resources/assets/sass/app.scss&#10;userc&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/app/Http/Controllers/UsersController.php&#10;app.s&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/resources/assets/sass/app.scss&#10;in&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/resources/views/users/index.blade.php&#10;app.\&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/resources/assets/sass/app.scss" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -637,12 +658,12 @@
       <workItem from="1482401714913" duration="1604000" />
       <workItem from="1482730668334" duration="8771000" />
       <workItem from="1482814928295" duration="7919000" />
-      <workItem from="1482908117507" duration="4418000" />
+      <workItem from="1482908117507" duration="6211000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82255000" />
+    <option name="totallyTimeSpent" value="84048000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -726,6 +747,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-254">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -905,14 +927,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SessionsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="43" column="55" selection-start-line="43" selection-start-column="55" selection-end-line="43" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/session.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -941,14 +955,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
           <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
           <folding />
         </state>
       </provider>
@@ -1025,22 +1031,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/static/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="186" column="34" selection-start-line="186" selection-start-column="12" selection-end-line="186" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/default.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="56" column="17" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/shared/msg.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2888">
@@ -1057,10 +1047,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/_navigation.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="61" column="55" selection-start-line="61" selection-start-column="36" selection-end-line="61" selection-end-column="55" />
+        <state relative-caret-position="123">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/default.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="56" column="17" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -1069,6 +1067,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/_navigation.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="61" column="55" selection-start-line="61" selection-start-column="36" selection-end-line="61" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/static/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="186" column="34" selection-start-line="186" selection-start-column="12" selection-end-line="186" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SessionsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="64" column="1" selection-start-line="64" selection-start-column="1" selection-end-line="64" selection-end-column="1" />
           <folding />
         </state>
       </provider>
