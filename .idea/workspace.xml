@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fcebf048-50df-4032-9b30-8364e483334f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/SessionsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/SessionsController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
@@ -32,7 +33,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RedirectIfAuthenticated.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RedirectIfAuthenticated.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="551">
@@ -49,6 +50,38 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="76">
               <caret line="82" column="12" selection-start-line="82" selection-start-column="12" selection-end-line="82" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UsersController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="41" column="38" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
+              <folding>
+                <element signature="e#40#60#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SessionsController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SessionsController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="358">
+              <caret line="43" column="18" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -127,9 +160,9 @@
         <option value="$PROJECT_DIR$/resources/views/users/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/default.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/shared/messages.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/SessionsController.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/SessionsController.php" />
       </list>
     </option>
   </component>
@@ -559,7 +592,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="$USER_HOME$/.nvm/versions/node/v6.7.0/bin/node" />
-    <property name="SearchEverywhereHistoryKey" value="r&#9;FILE&#9;file://G:/xampp/htdocs/laravel/app/Http/routes.php&#10;rou&#9;FILE&#9;file://G:/xampp/htdocs/laravel/app/Http/routes.php&#10;route&#9;FILE&#9;file://G:/xampp/htdocs/laravel/app/Http/routes.php&#10;ro&#9;FILE&#9;file://G:/xampp/htdocs/laravel-blog/laravel/app/Http/routes.php&#10;user&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/app/Models/User.php&#10;follow&#9;null&#9;null&#10;follows&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/database/seeds/FollowersTableSeeder.php&#10;rout&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/app/Http/routes.php&#10;app&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/resources/assets/sass/app.scss&#10;usersco&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/app/Http/Controllers/UsersController.php&#10;sta&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/app/Http/Controllers/StatusesController.php&#10;status&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/resources/views/statuses/_status.blade.php&#10;app.&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/resources/assets/sass/app.scss&#10;userc&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/app/Http/Controllers/UsersController.php&#10;app.s&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/resources/assets/sass/app.scss&#10;in&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/resources/views/users/index.blade.php&#10;app.\&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/resources/assets/sass/app.scss" />
+    <property name="SearchEverywhereHistoryKey" value="route&#9;FILE&#9;file://G:/xampp/htdocs/laravel/app/Http/routes.php&#10;r&#9;FILE&#9;file://G:/xampp/htdocs/laravel/app/Http/routes.php&#10;rou&#9;FILE&#9;file://G:/xampp/htdocs/laravel/app/Http/routes.php&#10;ro&#9;FILE&#9;file://G:/xampp/htdocs/laravel-blog/laravel/app/Http/routes.php&#10;user&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/app/Models/User.php&#10;follow&#9;null&#9;null&#10;follows&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/database/seeds/FollowersTableSeeder.php&#10;rout&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/app/Http/routes.php&#10;app&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/resources/assets/sass/app.scss&#10;usersco&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/app/Http/Controllers/UsersController.php&#10;sta&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/app/Http/Controllers/StatusesController.php&#10;status&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/resources/views/statuses/_status.blade.php&#10;app.&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/resources/assets/sass/app.scss&#10;userc&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/app/Http/Controllers/UsersController.php&#10;app.s&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/resources/assets/sass/app.scss&#10;in&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/resources/views/users/index.blade.php&#10;app.\&#9;FILE&#9;file:///Applications/XAMPP/xamppfiles/htdocs/Laravel/resources/assets/sass/app.scss" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -651,12 +684,12 @@
       <workItem from="1482730668334" duration="8771000" />
       <workItem from="1482814928295" duration="7919000" />
       <workItem from="1482908117507" duration="6471000" />
-      <workItem from="1482916222636" duration="1047000" />
+      <workItem from="1482916222636" duration="1203000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85355000" />
+    <option name="totallyTimeSpent" value="85511000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -929,16 +962,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="41" column="38" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
-          <folding>
-            <element signature="e#40#60#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/users/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -1015,14 +1038,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/default.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1064">
@@ -1055,14 +1070,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SessionsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Middleware/Authenticate.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-304">
@@ -1086,6 +1093,32 @@
           <folding>
             <element signature="e#39#51#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="41" column="38" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
+          <folding>
+            <element signature="e#40#60#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SessionsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="43" column="18" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
