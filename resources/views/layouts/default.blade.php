@@ -51,6 +51,7 @@
 <body class="with-top-navbar">
 
 @include('layouts._navigation')
+
 @include('shared.msg')
 @include('shared.messages')
 @yield('content')

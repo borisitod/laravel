@@ -28,10 +28,8 @@ class StaticPagesController extends Controller
         $feed_items = [];
         if (Auth::check()) {
             $feed_items = Auth::user()->feed()->paginate(30);
-            $user  = Auth::user();
+            $user =  Auth::user();
         }
-
-        $user =  Auth::user();
         $users = $user->followings()->paginate(30);
         $home_users = $users->sortby('created_at')->take(2);
       return view('static/home', compact('feed_items','user','home_users'));

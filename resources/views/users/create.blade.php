@@ -1,8 +1,8 @@
 @extends('layouts.default')
 @section('title', 'Register')
 @section('content')
-    <div class="col-md-offset-2 col-md-8">
-        <div class="panel panel-default">
+    <div class="col-md-offset-3 col-md-6" style="padding-top: 50px">
+        <div class="panel panel-default" >
             <div class="panel-heading">
                 <h5>Register</h5>
             </div>
