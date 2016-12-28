@@ -41,7 +41,7 @@ class SessionsController extends Controller
             if(Auth::user()->activated)
             {
                 session()->flash('success', 'Welcome back');
-                //return redirect()->intended(route('home', [Auth::user()]));
+                return redirect()->intended(route('home', [Auth::user()]));
                 //return redirect()->intended(route('home'));
             }else{
                 Auth::logout();
@@ -53,8 +53,6 @@ class SessionsController extends Controller
             sessions()->flash('danger', 'Sorry, You email or password is wrong.');
             return redirect()->back();
         }
-
-        return;
     }
 
     public function destroy(){
