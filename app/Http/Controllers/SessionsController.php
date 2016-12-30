@@ -37,7 +37,7 @@ class SessionsController extends Controller
             'password'=>$request->password
         ];
 
-//        if(Auth::attempt($credentials, $request->has('remember'))){
+        if(Auth::attempt($credentials, $request->has('remember'))){
 //            if(Auth::user()->activated)
 //            {
 //                session()->flash('success', 'Welcome back');
@@ -48,13 +48,14 @@ class SessionsController extends Controller
 //                session()->flash('warning', 'Your account has not been activated yet, please check your email');
 //                return redirect('/');
 //            }
-//
-//        }else{
-//            sessions()->flash('danger', 'Sorry, You email or password is wrong.');
-//            return redirect()->back();
-//        }
+            return $credentials;
 
-        return $credentials;
+        }else{
+            sessions()->flash('danger', 'Sorry, You email or password is wrong.');
+            return redirect()->back();
+        }
+
+
     }
 
     public function destroy(){
