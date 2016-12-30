@@ -48,7 +48,7 @@ class SessionsController extends Controller
             }
 
         }else{
-            sessions()->flash('danger', 'Sorry, You email or password is wrong.');
+            session()->flash('danger', 'Sorry, You email or password is wrong.');
             return redirect()->back();
         }
 
