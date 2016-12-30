@@ -6,19 +6,17 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Auth;
+
+use Auth;
 
 class SessionsController extends Controller
 {
     //
     public function __construct()
     {
-        $this->middleware('auth',[
-            'only'=>['edit','update']
-        ]);
 
         $this->middleware('guest',[
-            'only'=>['create']
+            'only'=>['login']
         ]);
     }
 
@@ -37,18 +35,17 @@ class SessionsController extends Controller
             'password'=>$request->password
         ];
 
-        if(Auth::attempt($credentials)){
-//            if(Auth::user()->activated)
-//            {
-//                session()->flash('success', 'Welcome back');
-//                return redirect()->intended(route('home', [Auth::user()]));
-//                //return redirect()->intended(route('home'));
-//            }else{
-//                Auth::logout();
-//                session()->flash('warning', 'Your account has not been activated yet, please check your email');
-//                return redirect('/');
-//            }
-            return $credentials;
+        if(Auth::attempt($credentials, $request->has('remember'))){
+            if(Auth::user()->activated)
+            {
+                session()->flash('success', 'Welcome back');
+                return redirect()->intended(route('home', [Auth::user()]));
+                //return redirect()->intended(route('home'));
+            }else{
+                Auth::logout();
+                session()->flash('warning', 'Your account has not been activated yet, please check your email');
+                return redirect('/');
+            }
 
         }else{
             sessions()->flash('danger', 'Sorry, You email or password is wrong.');
