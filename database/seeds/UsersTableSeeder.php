@@ -22,5 +22,13 @@ class UsersTableSeeder extends Seeder
         $user->is_admin = true;
         $user->activated = true;
         $user->save();
+
+        $user = User::find(2);
+        $user->name = 'Jasmine';
+        $user->email = 'jasmine@gmail.com';
+        $user->password = '111111';
+        $user->is_admin = true;
+        $user->activated = true;
+        $user->save();
     }
 }
