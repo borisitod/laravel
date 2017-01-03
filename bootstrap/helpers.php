@@ -48,3 +48,12 @@ function get_mail_config()
         ];
     }
 }
+
+function get_debug_config()
+{
+    if (getenv('IS_IN_HEROKU')) {
+        return $debug_config = false;
+    } else {
+        return $debug_config = true;
+    }
+}

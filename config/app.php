@@ -1,5 +1,6 @@
 <?php
 
+$debug_config = get_debug_config();
 return [
 
     /*
@@ -13,7 +14,7 @@ return [
     |
     */
 
-    'debug' => env('APP_DEBUG', true),
+    'debug' => $debug_config,
 
     /*
     |--------------------------------------------------------------------------
